@@ -1,26 +1,35 @@
+import { useQuery } from '@apollo/react-hooks';
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import {useParams} from 'react-router-dom';
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { img_300, noPicture } from "../../config/config";
 import "./Carousel.css";
+import {EPISODEBYID} from "../../graphql/EpisodeByID";
+
 
 const handleDragStart = (e) => e.preventDefault();
 
-const Gallery = ({ id}) => {
-  const [episode, setEpisode] = useState([]);
 
-  const items = episode?.map((c) => (
+ 
+const Gallery = ({ id}) => {
+
+  const { data } = useQuery(EPISODEBYID, {variables: {id}});
+
+  const items = data && data.characters && data.characters.map((characters) => (
     <div className="carouselItem">
+      
       <img
-        src={c?.image ? `${img_300}/${c?.characters?.id}.jpeg` : noPicture}
-        alt={c?.id}
+        src={characters.image}
+        alt={characters.id}
         onDragStart={handleDragStart}
         className="carouselItem__img"
       />
-      <b className="carouselItem__txt">{c.characters?.name}</b>
+      <b className="carouselItem__txt">{characters.name}</b>
+      
     </div>
-));
+  ));
  
   const responsive = {
     0: {
@@ -34,17 +43,7 @@ const Gallery = ({ id}) => {
     },
   };
 
-  const fetchEpisode = async () => {
-    const { data } = await axios.get(
-      `https://rickandmortyapi.com/api/episode/${id}`
-    );
-    setEpisode(data.characters);
-  };
-
-  useEffect(() => {
-    fetchEpisode();
-    // eslint-disable-next-line
-  }, []);
+  
 
   return (
     <AliceCarousel

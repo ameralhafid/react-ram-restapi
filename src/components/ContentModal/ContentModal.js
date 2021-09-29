@@ -103,8 +103,6 @@ export default function TransitionsModal({ children, id }) {
                    status: {content.status} <br />
                    Origin: {content.origin.name} <br />
                    Location: {content.location.name}   <br />  
-                
-                   
                    
                    </span>
 

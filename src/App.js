@@ -10,7 +10,6 @@ import { Container } from "@material-ui/core";
 import { CharacterDetailContainer } from "./components/Container/CharacterDetailContainer";
 import { EpisodeDetailContainer } from "./components/Container/EpisodeDetailContainer";
 
-
 function App() {
   return (
     <BrowserRouter>
@@ -33,5 +32,6 @@ function App() {
     </BrowserRouter>
   );
 }
+
 
 export default App;
