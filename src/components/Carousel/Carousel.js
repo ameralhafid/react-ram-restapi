@@ -1,10 +1,7 @@
 import { useQuery } from '@apollo/react-hooks';
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import {useParams} from 'react-router-dom';
+import React from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import { img_300, noPicture } from "../../config/config";
 import "./Carousel.css";
 import {EPISODEBYID} from "../../graphql/EpisodeByID";
 

@@ -87,9 +87,9 @@ export default function TransitionsModal({ children, media_type, id }) {
                     {content.episode || content.name}
                   </span>
                   {content.episode && (
-                    <i className="tagline">Name: {content.name}</i>
+                    <i className="ContentModal__title">Name: {content.name}</i>
                   )}
-                    <i className="tagline">Air Date: {content.air_date}</i>
+                    <i className="ContentModal__title">Air Date: {content.air_date}</i>
 
                   
                   

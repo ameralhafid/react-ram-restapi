@@ -8,7 +8,7 @@ export function CharacterByID({ character }) {
 
             <div className="characters">
                 <div className="image">
-                    <img src={character.image}  />
+                    <img alt={character.name} src={character.image}  />
                 </div>
                 <div  className="title">
                     <h3>Name: {character.name}</h3>
