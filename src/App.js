@@ -17,7 +17,7 @@ function App() {
       <div className="app">
         <Container>
           <Switch>
-           {/* <Route path="/" component={Home} exact />*/}            
+           {/* <Route path="/fav" component={Favourites} exact />*/}
             <Route path="/characters" component={Characters} />
             <Route path="/episodes" component={Episodes} />
             <Route path="/search" component={Search} />

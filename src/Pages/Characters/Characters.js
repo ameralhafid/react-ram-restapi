@@ -12,18 +12,18 @@ const Characters = () => {
     const { data } = await axios.get(
       `https://rickandmortyapi.com/api/character/?page=${page}`
     );
-    console.log(data);
+   // console.log(data);
     setContent(data.results);
   };
 
   useEffect(() => {
-    fetchCharacters();
-  }, [page]);
+      fetchCharacters();
+  });
 
   return (
     <div>
       <span className="pageTitle">Discover Characters ...</span>
-     
+
       <div className="characters">
         {content &&
           content.map((c) => (
