@@ -47,11 +47,14 @@ export default function TransitionsModal({ children, id }) {
     setContent(data);
   };
 
-  
+
+
+
 
   useEffect(() => {
     fetchData();
     // eslint-disable-next-line
+
   }, []);
 
   return (
@@ -85,7 +88,7 @@ export default function TransitionsModal({ children, id }) {
                   alt={content.name}
                   className="ContentModal__portrait"
                 />
-            
+
                 <div className="ContentModal__about">
                   <span className="ContentModal__title">
                     {content.name || content.species} (
@@ -102,8 +105,8 @@ export default function TransitionsModal({ children, id }) {
                   <span className="ContentModal__description">
                    status: {content.status} <br />
                    Origin: {content.origin.name} <br />
-                   Location: {content.location.name}   <br />  
-                   
+                   Location: {content.location.name}   <br />
+
                    </span>
 
                         <Button>
@@ -112,10 +115,10 @@ export default function TransitionsModal({ children, id }) {
                             </Link>
                         </Button>
 
-                
-                                    
-                         
-                  
+
+
+
+
                 </div>
               </div>
             </div>

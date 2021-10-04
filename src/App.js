@@ -8,6 +8,7 @@ import Search from "./Pages/Search/Search";
 import { Container } from "@material-ui/core";
 import { CharacterDetailContainer } from "./components/Container/CharacterDetailContainer";
 import { EpisodeDetailContainer } from "./components/Container/EpisodeDetailContainer";
+import Fav from "./Pages/Fav/Fav";
 
 function App() {
   return (
@@ -16,15 +17,15 @@ function App() {
       <div className="app">
         <Container>
           <Switch>
-           {/* <Route path="/fav" component={Favourites} exact />*/}
-            <Route path="/characters" component={Characters} />
+              <Route path="/characters" component={Characters} />
+            <Route path="/fav" component={Fav} exact />
             <Route path="/episodes" component={Episodes} />
               <Route path="/search" component={Search} />
             <Route exact path={`/character/:id`}
                  component={CharacterDetailContainer}/>
                  <Route exact path={`/episode/:id`}
                  component={EpisodeDetailContainer}/>
-              <Route path="/"/>
+
 
           </Switch>
         </Container>

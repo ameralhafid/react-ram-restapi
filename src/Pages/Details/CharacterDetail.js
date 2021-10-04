@@ -1,7 +1,11 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import {Button} from "@material-ui/core";
+
+
 export function CharacterByID({ character }) {
+
+    localStorage.setItem('fav', character.id);
 
 
     return (
@@ -18,26 +22,26 @@ export function CharacterByID({ character }) {
                     <h3>Status: {character.status}</h3>
                     <h4 className="title"> All Episodes with "{character.name}":</h4>
                 </div>
-                
-               
-                
-                
-                    
+
+
+
+
+
                      {character.episode.map((e) =>
-                     
-                     <div className="media">  
-                
-                    <div className="subTitle"> 
-                           
+
+                     <div className="media">
+
+                    <div className="subTitle">
+
                         <Button  disableElevation>
                             <Link exact to={`/episode/${e.id}`}>
                             {e.name}
                             </Link>
                         </Button>
-                        </div>  
-                        </div>             
+                        </div>
+                        </div>
                 )}
-                                    
+
 
 
 
