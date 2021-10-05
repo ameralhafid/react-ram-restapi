@@ -5,8 +5,10 @@ import {Button} from "@material-ui/core";
 
 export function CharacterByID({ character }) {
 
-    localStorage.setItem('fav', character.id);
-
+  //  localStorage.setItem('fav', character.id);
+    let favArr = [];
+    favArr.push(character.id);
+    localStorage.setItem('fav', JSON.stringify(favArr));
 
     return (
 

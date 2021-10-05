@@ -1,26 +1,31 @@
 import "./Fav.css";
-import React from "react";
-import {useQuery} from "@apollo/react-hooks";
-import {CHARACTERBYID} from "../../graphql/CharacterByID";
+import React, {useState} from "react";
 import SingleContent from "../../components/SingleContent/SingleContent";
 
 
 const Fav = () => {
 
-
-          const fav = localStorage.getItem('fav');
+    let fav = JSON.parse(localStorage.getItem('fav'));
+  //  const fav = localStorage.getItem('fav');
      console.log(fav);
-    const { data } = useQuery(CHARACTERBYID, {variables: {fav}});
 
-    console.log(data);
+    const [items] = useState([
+
+        {
+            id: fav,
+        }
+    ]);
+
+
+    console.log(items);
 
     return (
 
     <div>
-        <span className="pageTitle">Discover Characters ...</span>
+        <span className="pageTitle">Favourites Characters ...</span>
 
         <div className="characters">
-            {data && data.character.map((c) => (
+            {items.map((c) => (
                 <SingleContent
                     key={c.id}
                     id={c.id}

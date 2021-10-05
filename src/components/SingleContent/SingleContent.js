@@ -5,7 +5,6 @@ import ContentModal from "../ContentModal/ContentModal";
 
 const SingleContent = ({
   id,
-  image,
   title,
   status,
   gender,
@@ -15,9 +14,10 @@ const SingleContent = ({
     <ContentModal id={id}>
       <Badge
         badgeContent={status}
-        color={status === "Alive"  ? "Primary" : "Secondary"}
+        color={status === "Alive"  ? "primary"
+            : status === "Dead" ? "error" : "secondary"}
       />
-      
+
                  <img
         className="image"
         src={`${img_300}/${id}.jpeg`}
@@ -27,7 +27,7 @@ const SingleContent = ({
       <span className="subTitle">
         <span className="subTitle">{gender}</span>
         <span className="subTitle">{species}</span>
-       
+
       </span>
     </ContentModal>
   );
