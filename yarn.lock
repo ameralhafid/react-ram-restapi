@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@apollo/client@^3.4.13", "@apollo/client@latest":
-  "integrity" "sha512-/nH8z/0X6WJ+wtUREHTlKQGX4lo6u3XkF1hy+k4eCxLZzT5+VRw1rm92iIkj1H85vep/eE/KV3DdRq1x3t9NnQ=="
-  "resolved" "https://registry.npmjs.org/@apollo/client/-/client-3.4.13.tgz"
-  "version" "3.4.13"
+"@apollo/client@^3.4.16", "@apollo/client@latest":
+  "integrity" "sha512-iF4zEYwvebkri0BZQyv8zfavPfVEafsK0wkOofa6eC2yZu50J18uTutKtC174rjHZ2eyxZ8tV7NvAPKRT+OtZw=="
+  "resolved" "https://registry.npmjs.org/@apollo/client/-/client-3.4.16.tgz"
+  "version" "3.4.16"
   dependencies:
     "@graphql-typed-document-node/core" "^3.0.0"
     "@wry/context" "^0.6.0"

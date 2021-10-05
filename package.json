@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://github.com/ameralhafid/react-ram-restapi",
   "dependencies": {
-    "@apollo/client": "^3.4.13",
+    "@apollo/client": "^3.4.16",
     "@apollo/react-hooks": "^4.0.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
