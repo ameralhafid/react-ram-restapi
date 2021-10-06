@@ -80,7 +80,7 @@ export default function TransitionsModal({ children, id }) {
         }}
       >
         <Fade in={open}>
-          {content && (
+          {content && content.origin && content.location && (
             <div className={classes.paper}>
               <div className="ContentModal">
                 <img

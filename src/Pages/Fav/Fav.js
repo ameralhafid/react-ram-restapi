@@ -1,23 +1,26 @@
 import "./Fav.css";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import SingleContent from "../../components/SingleContent/SingleContent";
+import axios from "axios";
 
 
 const Fav = () => {
 
     let fav = JSON.parse(localStorage.getItem('fav'));
-  //  const fav = localStorage.getItem('fav');
      console.log(fav);
 
-    const [items] = useState([
+    const [content, setContent] = useState([]);
+    const fetchFav = async () => {
+        const { data } = await axios.get(
+            `https://rickandmortyapi.com/api/character/${fav}`
+        );
+        setContent(data);
+        console.log(data);
+    };
 
-        {
-            id: fav,
-        }
-    ]);
-
-
-    console.log(items);
+    useEffect(() => {
+        fetchFav();
+    });
 
     return (
 
@@ -25,7 +28,8 @@ const Fav = () => {
         <span className="pageTitle">Favourites Characters ...</span>
 
         <div className="characters">
-            {items.map((c) => (
+            {content &&
+            content.map((c) => (
                 <SingleContent
                     key={c.id}
                     id={c.id}

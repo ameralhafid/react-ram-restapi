@@ -1,5 +1,4 @@
 import { Badge } from "@material-ui/core";
-import { img_300 } from "../../config/config";
 import "./SingleContent.css";
 import ContentModal from "../ContentModal/ContentModal";
 
@@ -7,6 +6,7 @@ const SingleContent = ({
   id,
   title,
   status,
+    image,
   gender,
   species,
 }) => {
@@ -20,7 +20,7 @@ const SingleContent = ({
 
                  <img
         className="image"
-        src={`${img_300}/${id}.jpeg`}
+        src={image}
         alt={title}
       />
       <b className="title">{title}</b>

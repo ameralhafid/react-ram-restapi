@@ -6,7 +6,8 @@ import {Button} from "@material-ui/core";
 export function CharacterByID({ character }) {
 
   //  localStorage.setItem('fav', character.id);
-    let favArr = [];
+    //need to use useState to save the items in Array
+    let favArr = JSON.parse(localStorage.getItem('fav')) || [];
     favArr.push(character.id);
     localStorage.setItem('fav', JSON.stringify(favArr));
 
