@@ -7,7 +7,6 @@ import axios from "axios";
 const Fav = () => {
 
     let fav = JSON.parse(localStorage.getItem('fav'));
-     console.log(fav);
 
     const [content, setContent] = useState([]);
     const fetchFav = async () => {
@@ -15,7 +14,6 @@ const Fav = () => {
             `https://rickandmortyapi.com/api/character/${fav}`
         );
         setContent(data);
-        console.log(data);
     };
 
     useEffect(() => {
