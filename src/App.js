@@ -18,7 +18,7 @@ function App() {
         <Container>
           <Switch>
               <Route path="/characters" component={Characters} />
-            <Route path="/fav" component={Fav} exact />
+            <Route path="/fav" component={Fav} />
             <Route path="/episodes" component={Episodes} />
               <Route path="/search" component={Search} />
             <Route exact path={`/character/:id`}

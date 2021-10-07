@@ -58,7 +58,6 @@ export default function SimpleBottomNavigation() {
         <BottomNavigationAction
          style={{color: "white"}}
          label="characters"
-         exact path="/characters"
          icon={<PermIdentityIcon />} />
         <BottomNavigationAction
          style={{color: "white"}}

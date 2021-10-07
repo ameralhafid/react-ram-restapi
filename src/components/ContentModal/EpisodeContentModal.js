@@ -48,7 +48,7 @@ export default function TransitionsModal({ children, media_type, id }) {
     setContent(data);
   };
 
-  
+
 
   useEffect(() => {
     fetchData();
@@ -81,7 +81,7 @@ export default function TransitionsModal({ children, media_type, id }) {
           {content && (
             <div className={classes.paper}>
               <div className="ContentModal">
-              
+
                 <div className="ContentModal__about">
                   <span className="ContentModal__title">
                     {content.episode || content.name}
@@ -91,15 +91,15 @@ export default function TransitionsModal({ children, media_type, id }) {
                   )}
                     <i className="ContentModal__title">Air Date: {content.air_date}</i>
 
-                  
-                  
+
+
                   <Button>
                             <Link exact to={`/episode/${id}`}>
                                 details
                             </Link>
                         </Button>
                     <Carousel id={id} />
-                  
+
                 </div>
               </div>
             </div>
